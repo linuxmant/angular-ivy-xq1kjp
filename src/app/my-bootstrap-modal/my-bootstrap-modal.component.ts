@@ -12,13 +12,10 @@ export class MyBootstrapModalComponent implements OnInit {
   constructor(public activeModal: NgbActiveModal) {}
 
   ngOnInit() {
-    console.log(this.fromParent);
-    /* Output:
-     {prop1: "Some Data", prop2: "From Parent Component", prop3: "This Can be anything"}
-    */
+    console.log('Input: ' + this.fromParent);
   }
 
   closeModal(sendData) {
-    this.activeModal.close(sendData);
+    this.activeModal.close(this.fromParent);
   }
 }

@@ -4,7 +4,7 @@
     type="button"
     class="close"
     data-dismiss="modal"
-    (click)="closeModal('dismiss')"
+    (click)="modal.dismiss('dismiss')"
   >
     <span aria-hidden="true">&times;</span>
   </button>
@@ -18,15 +18,11 @@
     type="button"
     class="btn btn-secondary"
     data-dismiss="modal"
-    (click)="closeModal('close')"
+    (click)="modal.dismiss('close')"
   >
     Close
   </button>
-  <button
-    type="button"
-    class="btn btn-primary"
-    (click)="closeModal('changes saved!')"
-  >
+  <button type="button" class="btn btn-primary" (click)="closeModal(this.blah)">
     Save changes
   </button>
 </div>

@@ -8,6 +8,7 @@ import { MyBootstrapModalComponent } from './my-bootstrap-modal/my-bootstrap-mod
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  blah = '';
   name = 'Angular ' + VERSION.major;
 
   constructor(private modalService: NgbModal) {}
@@ -29,6 +30,7 @@ export class AppComponent {
     modalRef.componentInstance.fromParent = data;
     modalRef.result.then(
       (result) => {
+        this.blah = result;
         console.log(result);
       },
       (reason) => {}
